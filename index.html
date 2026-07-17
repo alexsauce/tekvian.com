@@ -48,8 +48,7 @@
   }
   </script>
 
-  <!-- Favicon placeholder — replace with actual favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230e7490'/><text x='4' y='23' font-family='Arial' font-weight='bold' font-size='16' fill='white'>T</text></svg>" />
+  <link rel="icon" type="image/png" href="images/TKV_ISOTIPO-03 v1.png" />
 
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -66,16 +65,16 @@
           fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
           colors: {
             brand: {
-              50:  '#ecfeff',
-              100: '#cffafe',
-              200: '#a5f3fc',
-              300: '#67e8f9',
-              400: '#22d3ee',
-              500: '#06b6d4',
-              600: '#0891b2',
-              700: '#0e7490',
-              800: '#155e75',
-              900: '#164e63',
+              50:  '#EEF2FF',
+              100: '#DCE9FF',
+              200: '#BAD0FF',
+              300: '#7694F4',
+              400: '#4168EE',
+              500: '#2747EB',
+              600: '#1E3DD4',
+              700: '#1530B8',
+              800: '#14249A',
+              900: '#000048',
             }
           },
           animation: {
@@ -93,17 +92,24 @@
 
   <style>
     body { font-family: 'Inter', system-ui, sans-serif; }
-    .gradient-hero { background: linear-gradient(135deg, #0f172a 0%, #0e4a5e 50%, #0e7490 100%); }
-    .gradient-card { background: linear-gradient(135deg, #0e7490 0%, #0891b2 100%); }
+    .gradient-hero { background: linear-gradient(135deg, #000048 0%, #0d1b6e 45%, #2747EB 100%); }
+    .gradient-card { background: linear-gradient(135deg, #2747EB 0%, #4168EE 100%); }
+    .hero-bg {
+      background-image: url('images/04.TKV_FONDOP_1.png');
+      background-size: cover;
+      background-position: center center;
+    }
     .animate-on-scroll { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
-    .service-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(14,116,144,0.15); }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(39,71,235,0.15); }
     .service-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
     #mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; }
-    .lang-active { background-color: #0e7490; color: white; }
+    .lang-active { background-color: #2747EB; color: white; }
     .nav-link { position: relative; }
-    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #06b6d4; transition: width 0.3s ease; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #4168EE; transition: width 0.3s ease; }
     .nav-link:hover::after { width: 100%; }
+    .logo-wordmark { filter: brightness(0) invert(1); }
+    .dark .logo-wordmark-auto { filter: brightness(0) invert(1); }
   </style>
 </head>
 
@@ -117,16 +123,9 @@
     <div class="flex items-center justify-between h-16 lg:h-18">
 
       <!-- Logo -->
-      <a href="#home" class="flex items-center gap-3 flex-shrink-0" aria-label="Tekvian Solutions Home">
-        <!-- SVG text logo — replace img src with actual logo file when available -->
-        <div class="flex items-center gap-2">
-          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect width="36" height="36" rx="8" fill="#0e7490"/>
-            <path d="M8 10h20M18 10v16" stroke="white" stroke-width="3" stroke-linecap="round"/>
-            <path d="M11 18l7 8 7-8" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span class="text-xl font-bold text-slate-900 dark:text-white tracking-tight">Tek<span class="text-brand-600">vian</span></span>
-        </div>
+      <a href="#home" class="flex items-center gap-2 flex-shrink-0" aria-label="Tekvian Solutions Home">
+        <img src="images/TKV_ISOTIPO-03 v1.png" alt="" aria-hidden="true" class="h-10 w-10 rounded-lg flex-shrink-0" />
+        <img src="images/TKV_LOGOTIPO-07 - Logo.png" alt="Tekvian" class="h-6 logo-wordmark-auto" />
       </a>
 
       <!-- Desktop Nav -->
@@ -187,12 +186,11 @@
 <!-- ============================================================
      HERO SECTION
      ============================================================ -->
-<section id="home" class="relative gradient-hero min-h-screen flex items-center overflow-hidden pt-16">
-  <!-- Decorative grid overlay -->
-  <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(rgba(6,182,212,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(6,182,212,0.3) 1px, transparent 1px); background-size: 50px 50px;"></div>
-  <!-- Glow orbs -->
-  <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
-  <div class="absolute bottom-1/4 left-1/6 w-64 h-64 bg-cyan-400/10 rounded-full blur-3xl pointer-events-none"></div>
+<section id="home" class="relative hero-bg min-h-screen flex items-center overflow-hidden pt-16">
+  <!-- Dark overlay for text readability over the wave image -->
+  <div class="absolute inset-0 bg-[#000048]/65"></div>
+  <!-- Subtle glow -->
+  <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
     <div class="max-w-3xl">
@@ -206,12 +204,16 @@
       <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
         <span data-en="Reliable IT Solutions &" data-es="Soluciones de TI Confiables &">Reliable IT Solutions &amp;</span>
         <br />
-        <span class="text-transparent bg-clip-text" style="background-image: linear-gradient(90deg, #22d3ee, #06b6d4);"
+        <span class="text-transparent bg-clip-text" style="background-image: linear-gradient(90deg, #7694F4, #4168EE);"
           data-en="Custom App Development" data-es="Desarrollo de Aplicaciones">Custom App Development</span>
         <br />
         <span class="text-slate-200 text-3xl sm:text-4xl lg:text-5xl font-bold"
           data-en="for Your Business" data-es="para su Negocio">for Your Business</span>
       </h1>
+
+      <!-- Tagline -->
+      <p class="text-brand-300 font-semibold text-lg tracking-wide mb-4 italic"
+         data-en="Technology full of life." data-es="Tecnología llena de vida.">Technology full of life.</p>
 
       <!-- Subheadline -->
       <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mb-10 leading-relaxed"
@@ -757,12 +759,8 @@
       <!-- Brand column -->
       <div class="lg:col-span-1">
         <div class="flex items-center gap-2 mb-4">
-          <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="36" height="36" rx="8" fill="#0e7490"/>
-            <path d="M8 10h20M18 10v16" stroke="white" stroke-width="3" stroke-linecap="round"/>
-            <path d="M11 18l7 8 7-8" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span class="text-lg font-bold text-white">Tek<span class="text-brand-400">vian</span></span>
+          <img src="images/TKV_ISOTIPO-03 v1.png" alt="" aria-hidden="true" class="h-9 w-9 rounded-lg flex-shrink-0" />
+          <img src="images/TKV_LOGOTIPO-07 - Logo.png" alt="Tekvian" class="h-5 logo-wordmark" />
         </div>
         <p class="text-sm leading-relaxed mb-5">Reliable IT solutions and custom software development for businesses in Southern Arizona and Northern Mexico since 2010.</p>
         <!-- Social icons -->
