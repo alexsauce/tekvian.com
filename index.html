@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tekvian Solutions, LLC — IT Services & Custom App Development | Nogales, AZ</title>
+  <meta name="description" content="Tekvian Solutions delivers managed IT services, custom software development, Microsoft 365, cloud solutions, and cybersecurity for businesses in Southern Arizona and Northern Mexico since 2010." />
+  <meta name="keywords" content="IT services Nogales AZ, managed IT, custom app development, Microsoft 365, Azure, cybersecurity, bilingual IT support, Southern Arizona IT" />
+  <meta name="author" content="Tekvian Solutions, LLC" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://tekvian.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tekvian.com/" />
+  <meta property="og:title" content="Tekvian Solutions, LLC — IT Services & Custom App Development" />
+  <meta property="og:description" content="Reliable IT solutions for small and medium businesses in Southern Arizona and Northern Mexico. Bilingual support since 2010." />
+  <meta property="og:image" content="https://tekvian.com/images/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Tekvian Solutions, LLC",
+    "description": "Managed IT services, custom software development, Microsoft 365, cybersecurity, and cloud solutions for SMBs in Southern Arizona and Northern Mexico.",
+    "url": "https://tekvian.com",
+    "telephone": "+15203136002",
+    "email": "info@tekvian.com",
+    "foundingDate": "2010",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "PO Box 1117",
+      "addressLocality": "Nogales",
+      "addressRegion": "AZ",
+      "postalCode": "85628",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 31.3404,
+      "longitude": -110.9343
+    },
+    "areaServed": ["Nogales AZ", "Southern Arizona", "Northern Mexico"],
+    "serviceType": ["Managed IT Services", "Custom Software Development", "Microsoft 365", "Cybersecurity", "Cloud Solutions"],
+    "sameAs": ["https://www.facebook.com/tekvian"]
+  }
+  </script>
+
+  <!-- Favicon placeholder — replace with actual favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230e7490'/><text x='4' y='23' font-family='Arial' font-weight='bold' font-size='16' fill='white'>T</text></svg>" />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            brand: {
+              50:  '#ecfeff',
+              100: '#cffafe',
+              200: '#a5f3fc',
+              300: '#67e8f9',
+              400: '#22d3ee',
+              500: '#06b6d4',
+              600: '#0891b2',
+              700: '#0e7490',
+              800: '#155e75',
+              900: '#164e63',
+            }
+          },
+          animation: {
+            'fade-up': 'fadeUp 0.6s ease-out forwards',
+            'fade-in': 'fadeIn 0.5s ease-out forwards',
+          },
+          keyframes: {
+            fadeUp: { '0%': { opacity: 0, transform: 'translateY(24px)' }, '100%': { opacity: 1, transform: 'translateY(0)' } },
+            fadeIn: { '0%': { opacity: 0 }, '100%': { opacity: 1 } },
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .gradient-hero { background: linear-gradient(135deg, #0f172a 0%, #0e4a5e 50%, #0e7490 100%); }
+    .gradient-card { background: linear-gradient(135deg, #0e7490 0%, #0891b2 100%); }
+    .animate-on-scroll { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(14,116,144,0.15); }
+    .service-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    #mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; }
+    .lang-active { background-color: #0e7490; color: white; }
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #06b6d4; transition: width 0.3s ease; }
+    .nav-link:hover::after { width: 100%; }
+  </style>
+</head>
+
+<body class="bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 antialiased">
+
+<!-- ============================================================
+     HEADER / NAVBAR
+     ============================================================ -->
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border-b border-slate-200 dark:border-slate-700">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+    <div class="flex items-center justify-between h-16 lg:h-18">
+
+      <!-- Logo -->
+      <a href="#home" class="flex items-center gap-3 flex-shrink-0" aria-label="Tekvian Solutions Home">
+        <!-- SVG text logo — replace img src with actual logo file when available -->
+        <div class="flex items-center gap-2">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="36" height="36" rx="8" fill="#0e7490"/>
+            <path d="M8 10h20M18 10v16" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            <path d="M11 18l7 8 7-8" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="text-xl font-bold text-slate-900 dark:text-white tracking-tight">Tek<span class="text-brand-600">vian</span></span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden lg:flex items-center gap-8">
+        <a href="#home"      class="nav-link text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors" data-en="Home"      data-es="Inicio">Home</a>
+        <a href="#services"  class="nav-link text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors" data-en="Services"   data-es="Servicios">Services</a>
+        <a href="#about"     class="nav-link text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors" data-en="About"      data-es="Nosotros">About</a>
+        <a href="#expertise" class="nav-link text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors" data-en="Expertise"  data-es="Soluciones">Expertise</a>
+        <a href="#contact"   class="nav-link text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors" data-en="Contact"    data-es="Contacto">Contact</a>
+      </div>
+
+      <!-- Right controls -->
+      <div class="hidden lg:flex items-center gap-3">
+        <!-- Language toggle -->
+        <div class="flex rounded-lg overflow-hidden border border-slate-200 dark:border-slate-600 text-xs font-semibold">
+          <button id="lang-en" onclick="setLang('en')" class="px-3 py-1.5 lang-active transition-colors" aria-label="Switch to English">EN</button>
+          <button id="lang-es" onclick="setLang('es')" class="px-3 py-1.5 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" aria-label="Cambiar a Español">ES</button>
+        </div>
+        <!-- Dark mode toggle -->
+        <button id="theme-toggle" onclick="toggleTheme()" class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle dark mode">
+          <svg id="icon-sun" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>
+          <svg id="icon-moon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+        <!-- CTA -->
+        <a href="#contact" class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors shadow-md shadow-brand-600/20" data-en="Free Consultation" data-es="Consulta Gratis">Free Consultation</a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Open menu" aria-expanded="false">
+        <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="lg:hidden overflow-hidden max-h-0 opacity-0">
+      <div class="py-4 border-t border-slate-100 dark:border-slate-700 space-y-1">
+        <a href="#home"      onclick="closeMobileMenu()" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800" data-en="Home"      data-es="Inicio">Home</a>
+        <a href="#services"  onclick="closeMobileMenu()" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800" data-en="Services"   data-es="Servicios">Services</a>
+        <a href="#about"     onclick="closeMobileMenu()" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800" data-en="About"      data-es="Nosotros">About</a>
+        <a href="#expertise" onclick="closeMobileMenu()" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800" data-en="Expertise"  data-es="Soluciones">Expertise</a>
+        <a href="#contact"   onclick="closeMobileMenu()" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800" data-en="Contact"    data-es="Contacto">Contact</a>
+        <div class="flex items-center gap-3 px-3 pt-2">
+          <div class="flex rounded-lg overflow-hidden border border-slate-200 dark:border-slate-600 text-xs font-semibold">
+            <button onclick="setLang('en')" class="px-3 py-1.5 lang-active">EN</button>
+            <button onclick="setLang('es')" class="px-3 py-1.5 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300">ES</button>
+          </div>
+          <button onclick="toggleTheme()" class="p-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </button>
+          <a href="#contact" onclick="closeMobileMenu()" class="flex-1 text-center bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors" data-en="Free Consultation" data-es="Consulta Gratis">Free Consultation</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ============================================================
+     HERO SECTION
+     ============================================================ -->
+<section id="home" class="relative gradient-hero min-h-screen flex items-center overflow-hidden pt-16">
+  <!-- Decorative grid overlay -->
+  <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(rgba(6,182,212,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(6,182,212,0.3) 1px, transparent 1px); background-size: 50px 50px;"></div>
+  <!-- Glow orbs -->
+  <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute bottom-1/4 left-1/6 w-64 h-64 bg-cyan-400/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+    <div class="max-w-3xl">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 bg-brand-600/20 border border-brand-400/30 text-brand-300 text-sm font-medium px-4 py-1.5 rounded-full mb-6">
+        <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+        <span data-en="Serving Southern Arizona & Northern Mexico since 2010" data-es="Sirviendo el sur de Arizona y norte de México desde 2010">Serving Southern Arizona &amp; Northern Mexico since 2010</span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+        <span data-en="Reliable IT Solutions &" data-es="Soluciones de TI Confiables &">Reliable IT Solutions &amp;</span>
+        <br />
+        <span class="text-transparent bg-clip-text" style="background-image: linear-gradient(90deg, #22d3ee, #06b6d4);"
+          data-en="Custom App Development" data-es="Desarrollo de Aplicaciones">Custom App Development</span>
+        <br />
+        <span class="text-slate-200 text-3xl sm:text-4xl lg:text-5xl font-bold"
+          data-en="for Your Business" data-es="para su Negocio">for Your Business</span>
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mb-10 leading-relaxed"
+         data-en="Tekvian Solutions provides expert managed IT, cloud migrations, cybersecurity, and custom software — in English and Spanish — so your business runs faster, safer, and smarter."
+         data-es="Tekvian Solutions ofrece TI gestionada, migraciones a la nube, ciberseguridad y software personalizado — en inglés y español — para que su negocio sea más rápido, seguro e inteligente.">
+        Tekvian Solutions provides expert managed IT, cloud migrations, cybersecurity, and custom software — in English and Spanish — so your business runs faster, safer, and smarter.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#contact"
+           class="inline-flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-400 text-white font-bold px-8 py-4 rounded-xl text-base transition-all shadow-lg shadow-brand-600/30 hover:shadow-brand-400/40 hover:scale-105"
+           data-en="Schedule Free Consultation" data-es="Agendar Consulta Gratis">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          Schedule Free Consultation
+        </a>
+        <a href="#services"
+           class="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-brand-400 text-white hover:text-brand-300 font-bold px-8 py-4 rounded-xl text-base transition-all hover:bg-white/5"
+           data-en="View Our Services" data-es="Ver Nuestros Servicios">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          View Our Services
+        </a>
+      </div>
+
+      <!-- Trust badges -->
+      <div class="flex flex-wrap gap-6 mt-12 pt-8 border-t border-white/10">
+        <div class="flex items-center gap-2 text-slate-300">
+          <svg class="w-5 h-5 text-brand-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <span class="text-sm font-medium" data-en="15+ Years Experience" data-es="15+ Años de Experiencia">15+ Years Experience</span>
+        </div>
+        <div class="flex items-center gap-2 text-slate-300">
+          <svg class="w-5 h-5 text-brand-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <span class="text-sm font-medium" data-en="Bilingual Support" data-es="Soporte Bilingüe">Bilingual Support</span>
+        </div>
+        <div class="flex items-center gap-2 text-slate-300">
+          <svg class="w-5 h-5 text-brand-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <span class="text-sm font-medium" data-en="Onsite &amp; Remote" data-es="Presencial y Remoto">Onsite &amp; Remote</span>
+        </div>
+        <div class="flex items-center gap-2 text-slate-300">
+          <svg class="w-5 h-5 text-brand-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <span class="text-sm font-medium" data-en="Nogales, AZ Based" data-es="Con base en Nogales, AZ">Nogales, AZ Based</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40 animate-bounce">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+  </div>
+</section>
+
+<!-- ============================================================
+     STATS BAR
+     ============================================================ -->
+<section class="bg-slate-900 dark:bg-slate-950 py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+      <div class="animate-on-scroll">
+        <div class="text-4xl font-extrabold text-brand-400 mb-1">15+</div>
+        <div class="text-sm text-slate-400" data-en="Years in Business" data-es="Años de Experiencia">Years in Business</div>
+      </div>
+      <div class="animate-on-scroll">
+        <div class="text-4xl font-extrabold text-brand-400 mb-1">100+</div>
+        <div class="text-sm text-slate-400" data-en="Businesses Served" data-es="Empresas Atendidas">Businesses Served</div>
+      </div>
+      <div class="animate-on-scroll">
+        <div class="text-4xl font-extrabold text-brand-400 mb-1">24/7</div>
+        <div class="text-sm text-slate-400" data-en="Remote Support" data-es="Soporte Remoto">Remote Support</div>
+      </div>
+      <div class="animate-on-scroll">
+        <div class="text-4xl font-extrabold text-brand-400 mb-1">2</div>
+        <div class="text-sm text-slate-400" data-en="Languages (EN/ES)" data-es="Idiomas (EN/ES)">Languages (EN/ES)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICES SECTION
+     ============================================================ -->
+<section id="services" class="py-24 bg-white dark:bg-slate-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section header -->
+    <div class="text-center max-w-2xl mx-auto mb-16 animate-on-scroll">
+      <span class="inline-block text-brand-600 dark:text-brand-400 text-sm font-semibold uppercase tracking-widest mb-3" data-en="What We Do" data-es="Lo Que Hacemos">What We Do</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4" data-en="IT Services Built for Your Business" data-es="Servicios de TI para su Negocio">IT Services Built for Your Business</h2>
+      <p class="text-lg text-slate-500 dark:text-slate-400" data-en="From day-to-day helpdesk support to full cloud migrations and custom software, we handle your technology so you can focus on growth." data-es="Desde soporte diario hasta migraciones a la nube y software personalizado, nos ocupamos de su tecnología para que usted se enfoque en crecer.">From day-to-day helpdesk support to full cloud migrations and custom software, we handle your technology so you can focus on growth.</p>
+    </div>
+
+    <!-- Service cards grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Card 1 -->
+      <div class="service-card group relative bg-white dark:bg-slate-800 rounded-2xl p-7 border border-slate-100 dark:border-slate-700 animate-on-scroll">
+        <div class="w-12 h-12 rounded-xl bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center mb-5 group-hover:bg-brand-100 dark:group-hover:bg-brand-900/50 transition-colors">
+          <svg class="w-6 h-6 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2" data-en="Custom Apps &amp; Web Development" data-es="Apps y Desarrollo Web Personalizado">Custom Apps &amp; Web Development</h3>
+        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4" data-en="Tailored web apps, internal tools, and automation scripts using C#, PowerShell, .NET, and modern web frameworks." data-es="Aplicaciones web, herramientas internas y scripts de automatización usando C#, PowerShell, .NET y frameworks modernos.">Tailored web apps, internal tools, and automation scripts using C#, PowerShell, .NET, and modern web frameworks.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-full">C# / .NET</span>
+          <span class="text-xs bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-full">PowerShell</span>
+          <span class="text-xs bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-full">Web Apps</span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card group relative bg-white dark:bg-slate-800 rounded-2xl p-7 border border-slate-100 dark:border-slate-700 animate-on-scroll">
+        <div class="w-12 h-12 rounded-xl bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center mb-5 group-hover:bg-brand-100 dark:group-hover:bg-brand-900/50 transition-colors">
+          <svg class="w-6 h-6 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0 0h18"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2" data-en="Managed IT Services" data-es="Servicios de TI Gestionados">Managed IT Services</h3>
+        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4" data-en="Proactive monitoring, patch management, endpoint security, and IT operations via NinjaOne RMM — keeping your systems healthy 24/7." data-es="Monitoreo proactivo, gestión de parches, seguridad de endpoints y operaciones de TI a través de NinjaOne RMM.">Proactive monitoring, patch management, endpoint security, and IT operations via NinjaOne RMM — keeping your systems healthy 24/7.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-full">NinjaOne</span>
+          <span class="text-xs bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-full">Monitoring</span>
+          <span class="text-xs bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-full">Patch Mgmt</span>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card group relative bg-white dark:bg-slate-800 rounded-2xl p-7 border border-slate-100 dark:border-slate-700 animate-on-scroll">
+        <div class="w-12 h-12 rounded-xl bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center mb-5 group-hover:bg-brand-100 dark:group-hover:bg-brand-900/50 transition-colors">
+          <svg class="w-6 h-6 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2" data-en="Remote Support &amp; Helpdesk" data-es="Soporte Remoto y Mesa de Ayuda">Remote Support &amp; Helpdesk</h3>
+        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4" data-en="Fast, friendly remote and onsite support for your team. We resolve issues quickly so your staff stays productive." data-es="Soporte remoto y presencial rápido y amigable para su equipo. Resolvemos problemas para que su personal sea productivo.">Fast, friendly remote and onsite support for your team. We resolve issues quickly so your staff stays productive.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-full">Remote Access</span>
+          <span class="text-xs bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-full">Onsite</span>
+          <span class="text-xs bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-full">Bilingual</span>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="service-card group relative bg-white dark:bg-slate-800 rounded-2xl p-7 border border-slate-100 dark:border-slate-700 animate-on-scroll">
+        <div class="w-12 h-12 rounded-xl bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center mb-5 group-hover:bg-brand-100 dark:group-hover:bg-brand-900/50 transition-colors">
+          <svg class="w-6 h-6 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2" data-en="IT Consulting &amp; Strategy" data-es="Consultoría y Estrategia de TI">IT Consulting &amp; Strategy</h3>
+        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4" data-en="Technology roadmaps, vendor evaluation, budget planning, and digital transformation strategy aligned to your business goals." data-es="Hoja de ruta tecnológica, evaluación de proveedores, planificación presupuestaria y estrategia de transformación digital.">Technology roadmaps, vendor evaluation, budget planning, and digital transformation strategy aligned to your business goals.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-full">Roadmaps</span>
+          <span class="text-xs bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-full">Vendor Mgmt</span>
+          <span class="text-xs bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-full">Strategy</span>
+        </div>
+      </div>
+
+      <!-- Card 5 — Featured (gradient) -->
+      <div class="service-card group relative gradient-card rounded-2xl p-7 border border-brand-500/30 animate-on-scroll">
+        <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2" data-en="Microsoft 365 &amp; Azure Cloud" data-es="Microsoft 365 y Azure Cloud">Microsoft 365 &amp; Azure Cloud</h3>
+        <p class="text-white/80 text-sm leading-relaxed mb-4" data-en="Full M365 deployment, migrations, Azure infrastructure, Entra ID, Intune MDM, Teams, SharePoint, and Exchange administration." data-es="Implementación completa de M365, migraciones, infraestructura Azure, Entra ID, Intune MDM, Teams, SharePoint y Exchange.">Full M365 deployment, migrations, Azure infrastructure, Entra ID, Intune MDM, Teams, SharePoint, and Exchange administration.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs bg-white/20 text-white px-2.5 py-1 rounded-full">M365</span>
+          <span class="text-xs bg-white/20 text-white px-2.5 py-1 rounded-full">Azure</span>
+          <span class="text-xs bg-white/20 text-white px-2.5 py-1 rounded-full">Intune</span>
+          <span class="text-xs bg-white/20 text-white px-2.5 py-1 rounded-full">Entra ID</span>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="service-card group relative bg-white dark:bg-slate-800 rounded-2xl p-7 border border-slate-100 dark:border-slate-700 animate-on-scroll">
+        <div class="w-12 h-12 rounded-xl bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center mb-5 group-hover:bg-brand-100 dark:group-hover:bg-brand-900/50 transition-colors">
+          <svg class="w-6 h-6 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2" data-en="Email Security, Networking &amp; Cyber" data-es="Seguridad de Email, Redes y Ciberseguridad">Email Security, Networking &amp; Cyber</h3>
+        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4" data-en="Proofpoint email security, firewall configuration, network monitoring, vulnerability assessments, and employee security training." data-es="Seguridad de email con Proofpoint, configuración de firewalls, monitoreo de red, evaluaciones de vulnerabilidades y capacitación.">Proofpoint email security, firewall configuration, network monitoring, vulnerability assessments, and security training.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-full">Proofpoint</span>
+          <span class="text-xs bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-full">Firewall</span>
+          <span class="text-xs bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-full">Cybersecurity</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA below services -->
+    <div class="text-center mt-12 animate-on-scroll">
+      <a href="#contact" class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-8 py-4 rounded-xl transition-colors shadow-lg shadow-brand-600/20"
+         data-en="Get a Free IT Assessment" data-es="Obtener Evaluación de TI Gratis">
+        Get a Free IT Assessment
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT / WHY CHOOSE US
+     ============================================================ -->
+<section id="about" class="py-24 bg-slate-50 dark:bg-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Left: Text -->
+      <div class="animate-on-scroll">
+        <span class="inline-block text-brand-600 dark:text-brand-400 text-sm font-semibold uppercase tracking-widest mb-3" data-en="About Tekvian" data-es="Sobre Tekvian">About Tekvian</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-6" data-en="Your Local IT Partner Since 2010" data-es="Su Socio Local de TI Desde 2010">Your Local IT Partner Since 2010</h2>
+        <p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed mb-6"
+           data-en="Tekvian Solutions, LLC was founded in Nogales, Arizona with one goal: deliver enterprise-grade IT services to small and medium businesses that deserve the same technology advantages as large corporations — at a price that makes sense."
+           data-es="Tekvian Solutions, LLC fue fundada en Nogales, Arizona con un objetivo: brindar servicios de TI de nivel empresarial a pequeñas y medianas empresas que merecen las mismas ventajas tecnológicas que las grandes corporaciones, a un precio razonable.">
+          Tekvian Solutions, LLC was founded in Nogales, Arizona with one goal: deliver enterprise-grade IT services to small and medium businesses that deserve the same technology advantages as large corporations — at a price that makes sense.
+        </p>
+        <blockquote class="border-l-4 border-brand-500 pl-5 py-2 mb-8">
+          <p class="text-slate-700 dark:text-slate-200 font-medium italic text-lg"
+             data-en="&ldquo;Experience and knowledge-base is what allows us to deliver satisfaction.&rdquo;"
+             data-es="&ldquo;La experiencia y la base de conocimiento es lo que nos permite entregar satisfacción.&rdquo;">
+            &ldquo;Experience and knowledge-base is what allows us to deliver satisfaction.&rdquo;
+          </p>
+          <footer class="mt-2 text-sm text-slate-500 dark:text-slate-400">— Tekvian Solutions</footer>
+        </blockquote>
+        <a href="#contact" class="inline-flex items-center gap-2 text-brand-600 dark:text-brand-400 font-semibold hover:underline"
+           data-en="Let's talk about your needs →" data-es="Hablemos de sus necesidades →">Let's talk about your needs →</a>
+      </div>
+
+      <!-- Right: Feature list -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 animate-on-scroll">
+        <div class="bg-white dark:bg-slate-900 rounded-xl p-6 border border-slate-100 dark:border-slate-700">
+          <div class="w-10 h-10 rounded-lg bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h4 class="font-bold text-slate-900 dark:text-white mb-1" data-en="Bilingual Team" data-es="Equipo Bilingüe">Bilingual Team</h4>
+          <p class="text-sm text-slate-500 dark:text-slate-400" data-en="English and Spanish support for your whole team, no matter which side of the border you operate on." data-es="Soporte en inglés y español para todo su equipo, sin importar de qué lado de la frontera opera.">English and Spanish support for your whole team, no matter which side of the border you operate on.</p>
+        </div>
+        <div class="bg-white dark:bg-slate-900 rounded-xl p-6 border border-slate-100 dark:border-slate-700">
+          <div class="w-10 h-10 rounded-lg bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h4 class="font-bold text-slate-900 dark:text-white mb-1" data-en="Cost Savings" data-es="Ahorro de Costos">Cost Savings</h4>
+          <p class="text-sm text-slate-500 dark:text-slate-400" data-en="Predictable monthly pricing eliminates surprise IT costs and reduces downtime that hurts your bottom line." data-es="Precios mensuales predecibles que eliminan costos de TI inesperados y reducen el tiempo de inactividad.">Predictable monthly pricing eliminates surprise IT costs and reduces downtime that hurts your bottom line.</p>
+        </div>
+        <div class="bg-white dark:bg-slate-900 rounded-xl p-6 border border-slate-100 dark:border-slate-700">
+          <div class="w-10 h-10 rounded-lg bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h4 class="font-bold text-slate-900 dark:text-white mb-1" data-en="Reliability First" data-es="Confiabilidad Primero">Reliability First</h4>
+          <p class="text-sm text-slate-500 dark:text-slate-400" data-en="We build systems and processes that minimize failures and maximize uptime, backed by years of hands-on experience." data-es="Construimos sistemas y procesos que minimizan fallas y maximizan el tiempo de actividad, respaldados por años de experiencia.">We build systems and processes that minimize failures and maximize uptime, backed by years of hands-on experience.</p>
+        </div>
+        <div class="bg-white dark:bg-slate-900 rounded-xl p-6 border border-slate-100 dark:border-slate-700">
+          <div class="w-10 h-10 rounded-lg bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h4 class="font-bold text-slate-900 dark:text-white mb-1" data-en="Local Presence" data-es="Presencia Local">Local Presence</h4>
+          <p class="text-sm text-slate-500 dark:text-slate-400" data-en="Nogales, AZ based — we understand the unique challenges of businesses operating in the US-Mexico border region." data-es="Con sede en Nogales, AZ — entendemos los desafíos únicos de las empresas en la región fronteriza EE.UU.-México.">Nogales, AZ based — we understand the unique challenges of businesses operating in the US-Mexico border region.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EXPERTISE / TECH STACK
+     ============================================================ -->
+<section id="expertise" class="py-24 bg-white dark:bg-slate-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16 animate-on-scroll">
+      <span class="inline-block text-brand-600 dark:text-brand-400 text-sm font-semibold uppercase tracking-widest mb-3" data-en="Our Expertise" data-es="Nuestra Experiencia">Our Expertise</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4" data-en="Technology We Master" data-es="Tecnología que Dominamos">Technology We Master</h2>
+      <p class="text-lg text-slate-500 dark:text-slate-400" data-en="Years of hands-on experience with the tools and platforms your business depends on." data-es="Años de experiencia práctica con las herramientas y plataformas de las que depende su negocio.">Years of hands-on experience with the tools and platforms your business depends on.</p>
+    </div>
+
+    <!-- Expertise pillars -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+      <div class="animate-on-scroll text-center p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:border-brand-300 dark:hover:border-brand-600 transition-colors">
+        <div class="w-14 h-14 mx-auto rounded-2xl gradient-card flex items-center justify-center mb-4">
+          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+        </div>
+        <h3 class="font-bold text-slate-900 dark:text-white mb-3" data-en="Cloud &amp; Microsoft 365" data-es="Nube y Microsoft 365">Cloud &amp; Microsoft 365</h3>
+        <div class="text-sm text-slate-500 dark:text-slate-400 space-y-1">
+          <p>Microsoft 365 &amp; Azure</p><p>Entra ID / Intune</p><p>SharePoint / Teams</p><p>Exchange Online</p>
+        </div>
+      </div>
+      <div class="animate-on-scroll text-center p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:border-brand-300 dark:hover:border-brand-600 transition-colors">
+        <div class="w-14 h-14 mx-auto rounded-2xl gradient-card flex items-center justify-center mb-4">
+          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        </div>
+        <h3 class="font-bold text-slate-900 dark:text-white mb-3" data-en="Security" data-es="Seguridad">Security</h3>
+        <div class="text-sm text-slate-500 dark:text-slate-400 space-y-1">
+          <p>Proofpoint Email</p><p>Endpoint Protection</p><p>Firewall &amp; VPN</p><p>Security Assessments</p>
+        </div>
+      </div>
+      <div class="animate-on-scroll text-center p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:border-brand-300 dark:hover:border-brand-600 transition-colors">
+        <div class="w-14 h-14 mx-auto rounded-2xl gradient-card flex items-center justify-center mb-4">
+          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+        </div>
+        <h3 class="font-bold text-slate-900 dark:text-white mb-3" data-en="Development" data-es="Desarrollo">Development</h3>
+        <div class="text-sm text-slate-500 dark:text-slate-400 space-y-1">
+          <p>C# / .NET / ASP.NET</p><p>PowerShell Automation</p><p>Web &amp; API Dev</p><p>SQL / Database</p>
+        </div>
+      </div>
+      <div class="animate-on-scroll text-center p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:border-brand-300 dark:hover:border-brand-600 transition-colors">
+        <div class="w-14 h-14 mx-auto rounded-2xl gradient-card flex items-center justify-center mb-4">
+          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0 0h18"/></svg>
+        </div>
+        <h3 class="font-bold text-slate-900 dark:text-white mb-3" data-en="IT Management" data-es="Gestión de TI">IT Management</h3>
+        <div class="text-sm text-slate-500 dark:text-slate-400 space-y-1">
+          <p>NinjaOne RMM</p><p>Active Directory</p><p>Network Mgmt</p><p>Backup &amp; DR</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tech logos row -->
+    <div class="animate-on-scroll bg-slate-50 dark:bg-slate-800 rounded-2xl px-8 py-6 border border-slate-100 dark:border-slate-700">
+      <p class="text-center text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5" data-en="Technologies &amp; Tools We Use" data-es="Tecnologías y Herramientas que Usamos">Technologies &amp; Tools We Use</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <span class="px-4 py-2 bg-white dark:bg-slate-900 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-600 shadow-sm">Microsoft 365</span>
+        <span class="px-4 py-2 bg-white dark:bg-slate-900 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-600 shadow-sm">Azure</span>
+        <span class="px-4 py-2 bg-white dark:bg-slate-900 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-600 shadow-sm">NinjaOne</span>
+        <span class="px-4 py-2 bg-white dark:bg-slate-900 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-600 shadow-sm">Proofpoint</span>
+        <span class="px-4 py-2 bg-white dark:bg-slate-900 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-600 shadow-sm">PowerShell</span>
+        <span class="px-4 py-2 bg-white dark:bg-slate-900 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-600 shadow-sm">C# / .NET</span>
+        <span class="px-4 py-2 bg-white dark:bg-slate-900 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-600 shadow-sm">Intune / Entra ID</span>
+        <span class="px-4 py-2 bg-white dark:bg-slate-900 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-600 shadow-sm">SharePoint</span>
+        <span class="px-4 py-2 bg-white dark:bg-slate-900 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-600 shadow-sm">Teams</span>
+        <span class="px-4 py-2 bg-white dark:bg-slate-900 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-600 shadow-sm">SQL Server</span>
+        <span class="px-4 py-2 bg-white dark:bg-slate-900 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-600 shadow-sm">Exchange Online</span>
+        <span class="px-4 py-2 bg-white dark:bg-slate-900 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-600 shadow-sm">Active Directory</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS (placeholders)
+     ============================================================ -->
+<section class="py-24 bg-slate-900 dark:bg-slate-950">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 animate-on-scroll">
+      <span class="inline-block text-brand-400 text-sm font-semibold uppercase tracking-widest mb-3" data-en="Client Stories" data-es="Testimonios">Client Stories</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white" data-en="What Our Clients Say" data-es="Lo Que Dicen Nuestros Clientes">What Our Clients Say</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="animate-on-scroll bg-slate-800 rounded-2xl p-7 border border-slate-700">
+        <div class="flex mb-4">
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <p class="text-slate-300 text-sm leading-relaxed mb-5 italic">"Tekvian migrated our entire company to Microsoft 365 smoothly, with zero downtime. Their bilingual support made the transition easy for our whole team."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-brand-600 flex items-center justify-center text-white font-bold text-sm">R.M.</div>
+          <div><p class="text-white font-semibold text-sm">R. Martinez</p><p class="text-slate-400 text-xs">Operations Manager, Nogales AZ</p></div>
+        </div>
+      </div>
+      <div class="animate-on-scroll bg-slate-800 rounded-2xl p-7 border border-slate-700">
+        <div class="flex mb-4">
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <p class="text-slate-300 text-sm leading-relaxed mb-5 italic">"The custom application Tekvian built saved us 15+ hours per week in manual processes. They understood our business and delivered exactly what we needed."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-brand-600 flex items-center justify-center text-white font-bold text-sm">S.L.</div>
+          <div><p class="text-white font-semibold text-sm">S. Lopez</p><p class="text-slate-400 text-xs">Business Owner, Southern Arizona</p></div>
+        </div>
+      </div>
+      <div class="animate-on-scroll bg-slate-800 rounded-2xl p-7 border border-slate-700">
+        <div class="flex mb-4">
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <p class="text-slate-300 text-sm leading-relaxed mb-5 italic">"Fast, professional, and always available. Tekvian set up our Proofpoint email security and we haven't had a phishing issue since. Highly recommended."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-brand-600 flex items-center justify-center text-white font-bold text-sm">A.G.</div>
+          <div><p class="text-white font-semibold text-sm">A. Garcia</p><p class="text-slate-400 text-xs">Office Manager, Nogales AZ</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA BANNER
+     ============================================================ -->
+<section class="py-20 gradient-hero relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(rgba(6,182,212,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(6,182,212,0.3) 1px, transparent 1px); background-size: 40px 40px;"></div>
+  <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4"
+        data-en="Ready to Transform Your Business IT?" data-es="¿Listo para Transformar la TI de su Negocio?">Ready to Transform Your Business IT?</h2>
+    <p class="text-xl text-slate-300 mb-8"
+       data-en="Get a free, no-obligation IT consultation. We'll assess your current setup and show you what's possible." data-es="Obtenga una consulta de TI gratuita y sin compromiso. Evaluaremos su configuración actual y le mostraremos qué es posible.">Get a free, no-obligation IT consultation. We'll assess your current setup and show you what's possible.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-400 text-white font-bold px-8 py-4 rounded-xl transition-all hover:scale-105 shadow-lg"
+         data-en="Schedule Free Consultation" data-es="Agendar Consulta Gratis">Schedule Free Consultation</a>
+      <a href="tel:+15203136002" class="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-brand-400 text-white font-bold px-8 py-4 rounded-xl transition-all hover:bg-white/5">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        (520) 313-6002
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT SECTION
+     ============================================================ -->
+<section id="contact" class="py-24 bg-white dark:bg-slate-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16 animate-on-scroll">
+      <span class="inline-block text-brand-600 dark:text-brand-400 text-sm font-semibold uppercase tracking-widest mb-3" data-en="Get In Touch" data-es="Contáctenos">Get In Touch</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4" data-en="Let's Start a Conversation" data-es="Iniciemos una Conversación">Let's Start a Conversation</h2>
+      <p class="text-lg text-slate-500 dark:text-slate-400" data-en="Fill out the form and we'll get back to you within one business day — usually much sooner." data-es="Complete el formulario y le responderemos en un día hábil, generalmente mucho antes.">Fill out the form and we'll get back to you within one business day — usually much sooner.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-5 gap-12">
+      <!-- Contact info -->
+      <div class="lg:col-span-2 space-y-6 animate-on-scroll">
+        <div class="flex gap-4">
+          <div class="w-11 h-11 rounded-xl bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          </div>
+          <div>
+            <p class="font-semibold text-slate-900 dark:text-white" data-en="Phone" data-es="Teléfono">Phone</p>
+            <a href="tel:+15203136002" class="text-brand-600 dark:text-brand-400 hover:underline">(520) 313-6002</a>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="w-11 h-11 rounded-xl bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <div>
+            <p class="font-semibold text-slate-900 dark:text-white" data-en="Email" data-es="Correo">Email</p>
+            <a href="mailto:info@tekvian.com" class="text-brand-600 dark:text-brand-400 hover:underline">info@tekvian.com</a>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="w-11 h-11 rounded-xl bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <div>
+            <p class="font-semibold text-slate-900 dark:text-white" data-en="Address" data-es="Dirección">Address</p>
+            <p class="text-slate-600 dark:text-slate-400">PO Box 1117<br/>Nogales, AZ 85628</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="w-11 h-11 rounded-xl bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div>
+            <p class="font-semibold text-slate-900 dark:text-white" data-en="Hours" data-es="Horario">Hours</p>
+            <p class="text-slate-600 dark:text-slate-400" data-en="Mon–Fri: 8 AM – 6 PM MST" data-es="Lun–Vie: 8 AM – 6 PM MST">Mon–Fri: 8 AM – 6 PM MST</p>
+            <p class="text-sm text-brand-600 dark:text-brand-400" data-en="Emergency support available 24/7" data-es="Soporte de emergencia disponible 24/7">Emergency support available 24/7</p>
+          </div>
+        </div>
+
+        <!-- Map embed -->
+        <div class="rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 mt-4">
+          <iframe
+            title="Tekvian Solutions Location — Nogales, AZ"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26671.26!2d-110.9343!3d31.3404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86d0ab44d2fd99b7%3A0x7d0e40e02abdb7!2sNogales%2C%20AZ%2085628!5e0!3m2!1sen!2sus!4v1234567890"
+            width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Contact form -->
+      <div class="lg:col-span-3 animate-on-scroll">
+        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate class="space-y-5">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label for="name" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5" data-en="Full Name *" data-es="Nombre Completo *">Full Name *</label>
+              <input type="text" id="name" name="name" required autocomplete="name" placeholder="John Smith"
+                class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-colors text-sm" />
+              <p id="name-error" class="text-red-500 text-xs mt-1 hidden" data-en="Please enter your name" data-es="Por favor ingrese su nombre">Please enter your name</p>
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5" data-en="Email Address *" data-es="Correo Electrónico *">Email Address *</label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="john@company.com"
+                class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-colors text-sm" />
+              <p id="email-error" class="text-red-500 text-xs mt-1 hidden" data-en="Please enter a valid email" data-es="Por favor ingrese un correo válido">Please enter a valid email</p>
+            </div>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label for="phone" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5" data-en="Phone Number" data-es="Número de Teléfono">Phone Number</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(520) 000-0000"
+                class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-colors text-sm" />
+            </div>
+            <div>
+              <label for="service" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5" data-en="Service Interested In" data-es="Servicio de Interés">Service Interested In</label>
+              <select id="service" name="service"
+                class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-colors text-sm">
+                <option value="" data-en="Select a service..." data-es="Seleccione un servicio...">Select a service...</option>
+                <option value="managed-it" data-en="Managed IT Services" data-es="Servicios de TI Gestionados">Managed IT Services</option>
+                <option value="m365" data-en="Microsoft 365 / Azure" data-es="Microsoft 365 / Azure">Microsoft 365 / Azure</option>
+                <option value="custom-dev" data-en="Custom App Development" data-es="Desarrollo de Apps">Custom App Development</option>
+                <option value="cybersecurity" data-en="Cybersecurity" data-es="Ciberseguridad">Cybersecurity</option>
+                <option value="helpdesk" data-en="Remote Support / Helpdesk" data-es="Soporte Remoto / Mesa de Ayuda">Remote Support / Helpdesk</option>
+                <option value="consulting" data-en="IT Consulting" data-es="Consultoría de TI">IT Consulting</option>
+                <option value="other" data-en="Other" data-es="Otro">Other</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5" data-en="Message *" data-es="Mensaje *">Message *</label>
+            <textarea id="message" name="message" required rows="5" placeholder="Tell us about your business and what you need help with..."
+              class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-colors text-sm resize-none"></textarea>
+            <p id="message-error" class="text-red-500 text-xs mt-1 hidden" data-en="Please enter your message" data-es="Por favor ingrese su mensaje">Please enter your message</p>
+          </div>
+          <!-- Hidden honeypot for spam prevention -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+          <input type="hidden" name="_subject" value="New inquiry from tekvian.com" />
+
+          <!-- Form status -->
+          <div id="form-success" class="hidden bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 text-green-700 dark:text-green-400 rounded-xl px-5 py-4 text-sm"
+               data-en="Thank you! We'll be in touch within one business day." data-es="¡Gracias! Le contactaremos dentro de un día hábil.">
+            Thank you! We'll be in touch within one business day.
+          </div>
+          <div id="form-error" class="hidden bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-400 rounded-xl px-5 py-4 text-sm"
+               data-en="Something went wrong. Please try again or call us directly." data-es="Algo salió mal. Intente de nuevo o llámenos directamente.">
+            Something went wrong. Please try again or call us directly.
+          </div>
+
+          <button type="submit" id="submit-btn"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold px-10 py-4 rounded-xl transition-all hover:scale-105 shadow-lg shadow-brand-600/20 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
+            data-en="Send Message" data-es="Enviar Mensaje">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="bg-slate-950 text-slate-400">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
+      <!-- Brand column -->
+      <div class="lg:col-span-1">
+        <div class="flex items-center gap-2 mb-4">
+          <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="36" height="36" rx="8" fill="#0e7490"/>
+            <path d="M8 10h20M18 10v16" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            <path d="M11 18l7 8 7-8" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="text-lg font-bold text-white">Tek<span class="text-brand-400">vian</span></span>
+        </div>
+        <p class="text-sm leading-relaxed mb-5">Reliable IT solutions and custom software development for businesses in Southern Arizona and Northern Mexico since 2010.</p>
+        <!-- Social icons -->
+        <div class="flex gap-3">
+          <a href="https://www.facebook.com/tekvian" target="_blank" rel="noopener noreferrer" aria-label="Tekvian on Facebook"
+             class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-brand-700 flex items-center justify-center transition-colors">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Tekvian on LinkedIn"
+             class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-brand-700 flex items-center justify-center transition-colors">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h4 class="text-white font-semibold mb-4" data-en="Services" data-es="Servicios">Services</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#services" class="hover:text-brand-400 transition-colors" data-en="Managed IT Services" data-es="Servicios de TI Gestionados">Managed IT Services</a></li>
+          <li><a href="#services" class="hover:text-brand-400 transition-colors" data-en="Custom App Development" data-es="Desarrollo de Apps">Custom App Development</a></li>
+          <li><a href="#services" class="hover:text-brand-400 transition-colors" data-en="Microsoft 365 &amp; Azure" data-es="Microsoft 365 y Azure">Microsoft 365 &amp; Azure</a></li>
+          <li><a href="#services" class="hover:text-brand-400 transition-colors" data-en="Email Security" data-es="Seguridad de Email">Email Security</a></li>
+          <li><a href="#services" class="hover:text-brand-400 transition-colors" data-en="IT Consulting" data-es="Consultoría de TI">IT Consulting</a></li>
+          <li><a href="#services" class="hover:text-brand-400 transition-colors" data-en="Remote Support" data-es="Soporte Remoto">Remote Support</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h4 class="text-white font-semibold mb-4" data-en="Company" data-es="Empresa">Company</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#about" class="hover:text-brand-400 transition-colors" data-en="About Us" data-es="Nosotros">About Us</a></li>
+          <li><a href="#expertise" class="hover:text-brand-400 transition-colors" data-en="Our Expertise" data-es="Nuestra Experiencia">Our Expertise</a></li>
+          <li><a href="#contact" class="hover:text-brand-400 transition-colors" data-en="Contact" data-es="Contacto">Contact</a></li>
+          <li><a href="privacy.html" class="hover:text-brand-400 transition-colors" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="text-white font-semibold mb-4" data-en="Contact Us" data-es="Contáctenos">Contact Us</h4>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-start gap-2">
+            <svg class="w-4 h-4 text-brand-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            <a href="tel:+15203136002" class="hover:text-brand-400 transition-colors">(520) 313-6002</a>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-4 h-4 text-brand-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <a href="mailto:info@tekvian.com" class="hover:text-brand-400 transition-colors">info@tekvian.com</a>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-4 h-4 text-brand-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>PO Box 1117<br/>Nogales, AZ 85628</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+      <p>&copy; <span id="year"></span> Tekvian Solutions, LLC. <span data-en="All rights reserved." data-es="Todos los derechos reservados.">All rights reserved.</span></p>
+      <div class="flex gap-6">
+        <a href="privacy.html" class="hover:text-brand-400 transition-colors" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a>
+        <a href="#home" class="hover:text-brand-400 transition-colors" data-en="Back to top ↑" data-es="Volver arriba ↑">Back to top ↑</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll-to-top button -->
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+  class="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-xl bg-brand-600 hover:bg-brand-700 text-white shadow-lg shadow-brand-600/30 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300"
+  aria-label="Back to top">
+  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
