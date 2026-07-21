@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service Agreement — Tekvian Solutions</title>
+  <meta name="description" content="Tekvian Solutions, LLC Service Agreement — terms governing all IT services, licenses, and products." />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/png" href="images/TKV_ISOTIPO-03 v1.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:'#EEF2FF',100:'#DCE9FF',200:'#BAD0FF',300:'#7694F4',
+              400:'#4168EE',500:'#2747EB',600:'#1E3DD4',700:'#1530B8',
+              800:'#14249A',900:'#000048',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .logo-wordmark-auto { }
+    .dark .logo-wordmark-auto { filter: brightness(0) invert(1); }
+    .toc-link { display: block; padding: 0.35rem 0.75rem; border-left: 2px solid transparent; font-size: 0.8125rem; color: #64748b; transition: all 0.2s; }
+    .toc-link:hover { color: #2747EB; border-left-color: #2747EB; background: #EEF2FF; border-radius: 0 4px 4px 0; }
+    .toc-link.active { color: #2747EB; border-left-color: #2747EB; font-weight: 600; background: #EEF2FF; border-radius: 0 4px 4px 0; }
+    .dark .toc-link { color: #94a3b8; }
+    .dark .toc-link:hover, .dark .toc-link.active { color: #7694F4; border-left-color: #7694F4; background: #1e293b; }
+    .legal-section { scroll-margin-top: 6rem; }
+    ol.legal-list { counter-reset: legal-counter; list-style: none; padding: 0; }
+    ol.legal-list li { counter-increment: legal-counter; position: relative; padding-left: 2rem; margin-bottom: 0.875rem; color: #475569; line-height: 1.7; }
+    .dark ol.legal-list li { color: #94a3b8; }
+    ol.legal-list li::before { content: counter(legal-counter) "."; position: absolute; left: 0; top: 0; font-weight: 700; color: #2747EB; min-width: 1.5rem; }
+    .dark ol.legal-list li::before { color: #7694F4; }
+    @media print {
+      header, .no-print { display: none !important; }
+      aside { display: none !important; }
+    }
+  </style>
+</head>
+
+<body class="bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 antialiased">
+
+<!-- ======= HEADER ======= -->
+<header id="navbar" class="fixed top-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-100 dark:border-slate-800">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <img src="images/TKV_LOGOTIPO-07 - Logo.png" alt="Tekvian" class="h-7 logo-wordmark-auto" />
+      </a>
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">← Back to Home</a>
+        <button onclick="toggleTheme()" class="p-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle theme">
+          <svg id="icon-sun" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M12 7a5 5 0 100 10A5 5 0 0012 7z"/></svg>
+          <svg id="icon-moon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+        <a href="index.html#contact" class="bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ======= HERO ======= -->
+<section class="bg-[#000048] pt-32 pb-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center gap-2 text-brand-300 text-sm mb-4">
+      <a href="index.html" class="hover:text-white transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-white">Service Agreement</span>
+    </div>
+    <h1 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">Service Agreement</h1>
+    <p class="text-brand-200 text-lg">Between TekVian Solutions, LLC and Customer</p>
+    <p class="text-slate-400 mt-2 max-w-2xl">This agreement governs all services, licenses, and products provided by Tekvian Solutions, LLC. Please read it carefully before accepting any service proposal.</p>
+  </div>
+</section>
+
+<!-- ======= BODY ======= -->
+<main class="pt-12 pb-24">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="lg:grid lg:grid-cols-[240px_1fr] lg:gap-12">
+
+      <!-- Sidebar TOC -->
+      <aside class="hidden lg:block no-print">
+        <div class="sticky top-24">
+          <div class="flex items-center justify-between mb-4">
+            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Sections</p>
+            <button onclick="window.print()" class="text-xs text-brand-600 dark:text-brand-400 hover:underline font-medium">Print</button>
+          </div>
+          <nav id="toc">
+            <a href="#section-preamble" class="toc-link">Preamble</a>
+            <a href="#section-a" class="toc-link">A. Scope of Services</a>
+            <a href="#section-b" class="toc-link">B. Responsibilities</a>
+            <a href="#section-c" class="toc-link">C. Access</a>
+            <a href="#section-d" class="toc-link">D. Additional Terms</a>
+            <a href="#section-e" class="toc-link">E. General Provisions</a>
+            <a href="#section-f" class="toc-link">F. Confidentiality &amp; Liability</a>
+            <a href="#section-g" class="toc-link">G. Miscellaneous</a>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- Mobile TOC -->
+      <div class="lg:hidden mb-8 no-print">
+        <details class="border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
+          <summary class="px-4 py-3 bg-slate-50 dark:bg-slate-800 font-semibold text-sm cursor-pointer">Table of Contents</summary>
+          <nav class="px-4 py-3 space-y-1 text-sm">
+            <a href="#section-preamble" class="block py-1 text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400">Preamble</a>
+            <a href="#section-a" class="block py-1 text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400">A. Scope of Services</a>
+            <a href="#section-b" class="block py-1 text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400">B. Responsibilities</a>
+            <a href="#section-c" class="block py-1 text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400">C. Access</a>
+            <a href="#section-d" class="block py-1 text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400">D. Additional Terms</a>
+            <a href="#section-e" class="block py-1 text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400">E. General Provisions</a>
+            <a href="#section-f" class="block py-1 text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400">F. Confidentiality &amp; Liability</a>
+            <a href="#section-g" class="block py-1 text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400">G. Miscellaneous</a>
+          </nav>
+        </details>
+        <div class="mt-4 text-right">
+          <button onclick="window.print()" class="text-sm text-brand-600 dark:text-brand-400 hover:underline font-medium">Print this page</button>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <article class="max-w-none">
+
+        <!-- Preamble -->
+        <section id="section-preamble" class="legal-section mb-12">
+          <div class="bg-brand-50 dark:bg-slate-800 border border-brand-200 dark:border-slate-700 rounded-xl p-6 mb-6">
+            <p class="text-slate-700 dark:text-slate-300 leading-relaxed">This Service Agreement <span class="font-semibold">("Agreement")</span> is a legal and binding contract between <span class="font-semibold">TekVian Solutions, LLC</span> (TekVian, We), an Arizona Limited Liability Company, and you <span class="font-semibold">(Customer, You)</span>, the Customer which is the signatory or acting on behalf of the legal entity that accepts this agreement.</p>
+          </div>
+        </section>
+
+        <!-- A. Scope of Services -->
+        <section id="section-a" class="legal-section mb-12">
+          <h2 class="text-xl font-bold text-brand-600 dark:text-brand-400 pb-3 mb-5 border-b border-slate-200 dark:border-slate-700">A. Scope of Services</h2>
+          <ol class="legal-list">
+            <li>This agreement governs all services that We perform or facilitate for You, as well as any licenses or products that TekVian sell or re-sell to Customer.</li>
+            <li>The Services are not described in this Agreement; instead, We will provide You with a quote, proposal, service order or similar electronic document describing them <span class="font-semibold text-slate-700 dark:text-slate-200">(Services Proposal)</span>. By accepting the Services Proposal, You also agree to the terms of this Agreement. If You do not agree to the terms of this Agreement, then You should not accept the Services Proposal.</li>
+          </ol>
+        </section>
+
+        <!-- B. Responsibilities -->
+        <section id="section-b" class="legal-section mb-12">
+          <h2 class="text-xl font-bold text-brand-600 dark:text-brand-400 pb-3 mb-5 border-b border-slate-200 dark:border-slate-700">B. Responsibilities</h2>
+
+          <h3 class="text-base font-semibold text-slate-700 dark:text-slate-300 mb-4">TekVian agrees to:</h3>
+          <ol class="legal-list mb-8">
+            <li>Services will be performed on a schedule, and in a prioritized manner, as We deem reasonable and necessary. Start dates may vary or deviate from the dates We state to You depending on the Service being provided.</li>
+            <li>Services delivered by TekVian may include a mix of on-site, remote, and phone support.</li>
+            <li>If We consider that a hardware or software issue requires vendor or OEM support, We may contact the vendor or OEM on your behalf and invoice You for all fees and costs involved in the process. We will obtain Customer authorization before incurring such expenses unless the circumstances require us otherwise.</li>
+          </ol>
+
+          <h3 class="text-base font-semibold text-slate-700 dark:text-slate-300 mb-4">Responsibilities of Customer:</h3>
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-5">Customer hereby agrees and is responsible for compensating Provider fees, costs, and expenses charged by TekVian for the services described in each Service Proposal. You are responsible for sales taxes and other taxes, or governmental fees associated with the services. You are also responsible for all freight, insurance, and related taxes.</p>
+          <ol class="legal-list">
+            <li>For on-site services of less than 1 hour, a <span class="font-semibold text-slate-700 dark:text-slate-200">minimum of one hour will be charged</span>. For remote services a <span class="font-semibold text-slate-700 dark:text-slate-200">minimum of 15 minutes will be charged</span>. Services will be charged by 15-minute increments after the first hour. Travel time for the consultant may be assessed at the consultant's normal hourly rate. Other travel costs for long-distance travel will be negotiated with Customer as needed and applicable.</li>
+            <li>Customer will be invoiced and provided with service reports for all services provided. Payment terms for invoices are <span class="font-semibold text-slate-700 dark:text-slate-200">due on receipt</span>. If payment is not received according to the terms of the agreement, TekVian reserves the right to suspend all services without further notice.</li>
+            <li>TekVian reserves the right to modify payment terms and rates upon <span class="font-semibold text-slate-700 dark:text-slate-200">30 days written notice</span> to designated Customer representative.</li>
+            <li>Fees that remain unpaid for more than thirty (30) days after the date on the applicable invoice will be subject to interest on the unpaid amounts at the lower of either <span class="font-semibold text-slate-700 dark:text-slate-200">5% per month</span> or the maximum allowable rate permitted by applicable law, until and including the date payment is received. We reserve the right to suspend part or all of the Services without prior notice in the event that payments are not timely received.</li>
+            <li>Each term of each Service will renew automatically for additional terms equal in length to the initial term, unless Customer notifies TekVian in writing not less than <span class="font-semibold text-slate-700 dark:text-slate-200">thirty (30) days prior</span> to the end of the initial term that it wishes to terminate such Service.</li>
+          </ol>
+        </section>
+
+        <!-- C. Access -->
+        <section id="section-c" class="legal-section mb-12">
+          <h2 class="text-xl font-bold text-brand-600 dark:text-brand-400 pb-3 mb-5 border-b border-slate-200 dark:border-slate-700">C. Access</h2>
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">You hereby grant to TekVian and our designated third-party vendors the right to monitor, diagnose, manipulate, communicate with, retrieve information from, and otherwise access any computer network, computer system, peripheral, or device acquired, installed, maintained, monitored, or operated by TekVian <span class="font-semibold text-slate-700 dark:text-slate-200">("Environment")</span> solely as necessary to enable us or our vendors to provide the Services.</p>
+        </section>
+
+        <!-- D. Additional Terms -->
+        <section id="section-d" class="legal-section mb-12">
+          <h2 class="text-xl font-bold text-brand-600 dark:text-brand-400 pb-3 mb-5 border-b border-slate-200 dark:border-slate-700">D. Additional Terms &amp; Third-Party Services</h2>
+          <ol class="legal-list">
+            <li>Portions of the Services may require You to accept the terms of one or more third-party end user license agreements, customer agreements, and/or subscription agreements <span class="font-semibold text-slate-700 dark:text-slate-200">("End User Agreements")</span>. If acceptance of an End User Agreement is required to provide Services to You, then You hereby grant TekVian permission to accept applicable agreements on your behalf. You agree to be bound by the terms of such End User Agreements.</li>
+            <li>Portions of the Services may be acquired from, resold from, and/or rely upon the services of third-party vendors, manufacturers, or providers <span class="font-semibold text-slate-700 dark:text-slate-200">("Third Party Provider")</span>. Third Party Providers may provide services such as data hosting, help desk, malware detection, domain registration, and data backup/recovery <span class="font-semibold text-slate-700 dark:text-slate-200">("Third Party Service")</span>. You understand and agree that Third Party Providers are not our contractors or suppliers; We will not be responsible, and will be held harmless by You, for any failure of any Third Party Service or Third Party Provider.</li>
+            <li>The Services may require TekVian to purchase certain <span class="font-semibold text-slate-700 dark:text-slate-200">"per seat" licenses from Microsoft ("NCE Licenses")</span> to provide one or more of the following: Microsoft 365, Windows 365, Dynamics 365, and Microsoft Power Platform. As per Microsoft's requirements, NCE licenses cannot be canceled once purchased and cannot be transferred to any other customer. If We purchase NCE licenses on your behalf, those licenses may require a definite term of one (1) or three (3) years. You understand and agree that regardless of the reason for termination of the Services, You are required to pay for all applicable NCE Licenses in full for the entire term of those licenses. Provided You have paid in full, You will be permitted to use the applicable NCE Applications until expiration of their license terms, even if You terminate services with TekVian.</li>
+          </ol>
+        </section>
+
+        <!-- E. General Provisions -->
+        <section id="section-e" class="legal-section mb-12">
+          <h2 class="text-xl font-bold text-brand-600 dark:text-brand-400 pb-3 mb-5 border-b border-slate-200 dark:border-slate-700">E. General Provisions</h2>
+          <ol class="legal-list">
+            <li>TekVian will not refund any payments for services rendered to Customer.</li>
+          </ol>
+        </section>
+
+        <!-- F. Confidentiality -->
+        <section id="section-f" class="legal-section mb-12">
+          <h2 class="text-xl font-bold text-brand-600 dark:text-brand-400 pb-3 mb-5 border-b border-slate-200 dark:border-slate-700">F. Confidentiality, Nondisclosure, Nonsolicitation &amp; Limitation of Liability</h2>
+          <ol class="legal-list">
+            <li>TekVian and Customer mutually agree not to disclose confidential or proprietary information that has been identified as such by either party.</li>
+            <li>TekVian shall not be liable to Customer for any loss, damages, claims, or costs whatsoever including any consequential, indirect, or incidental damages, any lost profits, any damages resulting from business interruption, personal injury or failure to meet any duty of care, or claims by a third party, except in the case of TekVian gross negligence or intentional misconduct.</li>
+          </ol>
+        </section>
+
+        <!-- G. Miscellaneous -->
+        <section id="section-g" class="legal-section mb-12">
+          <h2 class="text-xl font-bold text-brand-600 dark:text-brand-400 pb-3 mb-5 border-b border-slate-200 dark:border-slate-700">G. Miscellaneous</h2>
+          <ol class="legal-list">
+            <li>All prior negotiations and agreements between the parties relating to the subject matter hereof are superseded by this Agreement. As of the date hereof there are no representations, warranties, understandings, or agreements, whether written or oral, expressed or implied, other than those specifically set forth herein.</li>
+            <li>This Agreement may only be amended by a written agreement signed by all parties. Each party agrees to cooperate fully in the effectuation of the transactions contemplated hereby and to execute any additional documents or take additional actions as reasonably necessary for such purpose.</li>
+            <li>This Agreement shall be governed by and construed in accordance with the laws of the <span class="font-semibold text-slate-700 dark:text-slate-200">State of Arizona</span>.</li>
+            <li>The parties shall use their best efforts to promptly resolve any dispute, controversy, or claim arising out of or relating to this Agreement by meeting and negotiating in good faith. All disputes which cannot first be resolved through good-faith negotiations, and which are raised in writing within nine (9) months of the date such claim arose, shall first be submitted to mediation. If not successfully mediated, the dispute shall be resolved by arbitration conducted in <span class="font-semibold text-slate-700 dark:text-slate-200">Nogales, Arizona</span>, according to the commercial arbitration rules of the American Arbitration Association (AAA). There shall be a single arbitrator, who shall be a retired or former state or federal judge, selected by mutual agreement. The decision of the arbitrator shall be binding upon the parties, and judgment to enforce any such decision may be entered in Superior Court, Santa Cruz County, Arizona.</li>
+            <li>Upon termination of this Agreement, any labor or other expenses incurred by TekVian shall be paid by Customer in advance. Either party may terminate this Agreement at any time by providing at least <span class="font-semibold text-slate-700 dark:text-slate-200">three (3) months prior written notice</span> to the other party. Customer acknowledges and agrees that Customer is responsible to pay in full all sums owed.</li>
+            <li>Customer (and any of its subsidiaries, related companies, agents, and employees) agrees that they shall not, during the term of this Agreement and for a period of <span class="font-semibold text-slate-700 dark:text-slate-200">24 months following termination</span>, directly or indirectly solicit, divert, or take away any employees of TekVian, or accept business from any employees of TekVian.</li>
+          </ol>
+        </section>
+
+        <!-- Contact Box -->
+        <div class="bg-slate-50 dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700">
+          <p class="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3">Questions about this Agreement?</p>
+          <div class="flex flex-wrap gap-4 text-sm text-slate-600 dark:text-slate-400">
+            <a href="tel:+15203136002" class="flex items-center gap-1.5 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+              <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              (520) 313-6002
+            </a>
+            <a href="mailto:info@tekvian.com" class="flex items-center gap-1.5 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+              <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              info@tekvian.com
+            </a>
+            <span class="text-slate-400">PO BOX 1117, Nogales, AZ 85628</span>
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </div>
+</main>
+
+<!-- ======= FOOTER ======= -->
+<footer class="bg-[#000048] text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <img src="images/TKV_LOGOTIPO-07 - Logo.png" alt="Tekvian Solutions" class="h-6 logo-wordmark" />
+      </div>
+      <p class="text-sm text-slate-500 text-center">
+        &copy; <span id="year"></span> Tekvian Solutions, LLC. All rights reserved.
+      </p>
+      <div class="flex gap-4 text-sm">
+        <a href="privacy.html" class="hover:text-brand-400 transition-colors">Privacy Policy</a>
+        <a href="agreement.html" class="hover:text-brand-400 transition-colors">Service Agreement</a>
+        <a href="index.html" class="hover:text-brand-400 transition-colors">Back to Home ↑</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const root = document.documentElement;
+
+  function applyTheme(dark) {
+    dark ? root.classList.add('dark') : root.classList.remove('dark');
+    document.getElementById('icon-sun').classList.toggle('hidden', !dark);
+    document.getElementById('icon-moon').classList.toggle('hidden', dark);
+  }
+
+  function toggleTheme() {
+    const dark = !root.classList.contains('dark');
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+    applyTheme(dark);
+  }
+
+  (function () {
+    const stored = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyTheme(stored ? stored === 'dark' : prefersDark);
+  })();
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Scroll-spy for TOC
+  const sections = document.querySelectorAll('.legal-section');
+  const tocLinks = document.querySelectorAll('#toc .toc-link');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`#toc a[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { threshold: 0.3, rootMargin: '-80px 0px -60% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
