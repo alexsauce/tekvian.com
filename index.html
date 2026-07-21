@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -114,6 +114,10 @@
     .marquee-track { display: flex; animation: marquee 28s linear infinite; width: max-content; }
     .marquee-track:hover { animation-play-state: paused; }
     .marquee-wrapper { overflow: hidden; mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
+    .partner-logo-img { filter: grayscale(100%) opacity(0.55); transition: filter 0.25s ease; }
+    .partner-logo-img:hover { filter: grayscale(0%) opacity(1); }
+    .dark .partner-logo-img { filter: grayscale(100%) invert(1) opacity(0.5); }
+    .dark .partner-logo-img:hover { filter: grayscale(0%) invert(0) opacity(1); }
   </style>
 </head>
 
@@ -330,89 +334,71 @@
       <div class="marquee-track gap-6">
         <!-- First set -->
         <div class="flex gap-6 items-center">
-          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[140px]">
-            <svg class="w-5 h-5 text-[#00a4ef]" fill="currentColor" viewBox="0 0 24 24"><path d="M11.4 0H0v11.4h11.4V0zM24 0H12.6v11.4H24V0zM11.4 12.6H0V24h11.4V12.6zM24 12.6H12.6V24H24V12.6z"/></svg>
-            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Microsoft</span>
+          <div class="flex-shrink-0 px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center justify-center min-w-[100px]">
+            <img src="https://cdn.simpleicons.org/microsoft" alt="Microsoft" class="h-6 w-auto partner-logo-img" />
           </div>
           <div class="flex-shrink-0 px-5 py-3 rounded-xl border-2 border-[#FFB900] bg-[#FFF8E6] dark:bg-[#2a2200] flex items-center gap-2 min-w-[180px]">
             <svg class="w-4 h-4 text-[#FFB900]" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
             <div><span class="text-xs font-bold text-[#B8860B] dark:text-[#FFB900] block leading-tight">Microsoft</span><span class="text-xs font-semibold text-[#B8860B] dark:text-[#FFB900]">Partner</span></div>
           </div>
-          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[140px]">
-            <svg class="w-5 h-5 text-[#00bcf2]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
-            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Azure</span>
+          <div class="flex-shrink-0 px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center justify-center min-w-[100px]">
+            <img src="https://cdn.simpleicons.org/microsoftazure" alt="Microsoft Azure" class="h-6 w-auto partner-logo-img" />
           </div>
-          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[150px]">
-            <svg class="w-5 h-5 text-[#FF6B35]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm3 10.5H9v-1.5h2.25V10.5H9V9h4.5v5.5H15v1z"/></svg>
-            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Proofpoint</span>
+          <div class="flex-shrink-0 px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center justify-center min-w-[100px]">
+            <img src="https://cdn.simpleicons.org/proofpoint" alt="Proofpoint" class="h-6 w-auto partner-logo-img" />
           </div>
-          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[140px]">
-            <svg class="w-5 h-5 text-[#1D6F42]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
-            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">NinjaOne</span>
+          <div class="flex-shrink-0 px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center justify-center min-w-[100px]">
+            <img src="https://cdn.simpleicons.org/ninjarmm" alt="NinjaOne" class="h-6 w-auto partner-logo-img" />
           </div>
-          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[130px]">
-            <svg class="w-5 h-5 text-[#005073]" fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4a2 2 0 00-2 2v12a2 2 0 002 2h4l4 4 4-4h4a2 2 0 002-2V4a2 2 0 00-2-2z"/></svg>
-            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Cisco</span>
+          <div class="flex-shrink-0 px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center justify-center min-w-[100px]">
+            <img src="https://cdn.simpleicons.org/cisco" alt="Cisco" class="h-6 w-auto partner-logo-img" />
           </div>
-          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[130px]">
-            <svg class="w-5 h-5 text-[#0096D6]" fill="currentColor" viewBox="0 0 24 24"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg>
-            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">HP</span>
+          <div class="flex-shrink-0 px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center justify-center min-w-[100px]">
+            <img src="https://cdn.simpleicons.org/hp" alt="HP" class="h-6 w-auto partner-logo-img" />
           </div>
-          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[140px]">
-            <svg class="w-5 h-5 text-[#1d8348]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
-            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Ubiquiti</span>
+          <div class="flex-shrink-0 px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center justify-center min-w-[100px]">
+            <img src="https://cdn.simpleicons.org/ubiquiti" alt="Ubiquiti" class="h-6 w-auto partner-logo-img" />
           </div>
-          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[130px]">
-            <svg class="w-5 h-5 text-[#2D8CFF]" fill="currentColor" viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
-            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Zoom</span>
+          <div class="flex-shrink-0 px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center justify-center min-w-[100px]">
+            <img src="https://cdn.simpleicons.org/zoom" alt="Zoom" class="h-6 w-auto partner-logo-img" />
           </div>
-          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[140px]">
-            <svg class="w-5 h-5 text-[#B01C2E]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
-            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Sophos</span>
+          <div class="flex-shrink-0 px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center justify-center min-w-[100px]">
+            <img src="https://cdn.simpleicons.org/sophos" alt="Sophos" class="h-6 w-auto partner-logo-img" />
           </div>
           <div class="w-6 flex-shrink-0"></div>
         </div>
         <!-- Duplicate for seamless loop -->
         <div class="flex gap-6 items-center">
-          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[140px]">
-            <svg class="w-5 h-5 text-[#00a4ef]" fill="currentColor" viewBox="0 0 24 24"><path d="M11.4 0H0v11.4h11.4V0zM24 0H12.6v11.4H24V0zM11.4 12.6H0V24h11.4V12.6zM24 12.6H12.6V24H24V12.6z"/></svg>
-            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Microsoft</span>
+          <div class="flex-shrink-0 px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center justify-center min-w-[100px]">
+            <img src="https://cdn.simpleicons.org/microsoft" alt="Microsoft" class="h-6 w-auto partner-logo-img" />
           </div>
           <div class="flex-shrink-0 px-5 py-3 rounded-xl border-2 border-[#FFB900] bg-[#FFF8E6] dark:bg-[#2a2200] flex items-center gap-2 min-w-[180px]">
             <svg class="w-4 h-4 text-[#FFB900]" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
             <div><span class="text-xs font-bold text-[#B8860B] dark:text-[#FFB900] block leading-tight">Microsoft</span><span class="text-xs font-semibold text-[#B8860B] dark:text-[#FFB900]">Partner</span></div>
           </div>
-          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[140px]">
-            <svg class="w-5 h-5 text-[#00bcf2]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
-            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Azure</span>
+          <div class="flex-shrink-0 px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center justify-center min-w-[100px]">
+            <img src="https://cdn.simpleicons.org/microsoftazure" alt="Microsoft Azure" class="h-6 w-auto partner-logo-img" />
           </div>
-          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[150px]">
-            <svg class="w-5 h-5 text-[#FF6B35]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm3 10.5H9v-1.5h2.25V10.5H9V9h4.5v5.5H15v1z"/></svg>
-            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Proofpoint</span>
+          <div class="flex-shrink-0 px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center justify-center min-w-[100px]">
+            <img src="https://cdn.simpleicons.org/proofpoint" alt="Proofpoint" class="h-6 w-auto partner-logo-img" />
           </div>
-          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[140px]">
-            <svg class="w-5 h-5 text-[#1D6F42]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
-            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">NinjaOne</span>
+          <div class="flex-shrink-0 px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center justify-center min-w-[100px]">
+            <img src="https://cdn.simpleicons.org/ninjarmm" alt="NinjaOne" class="h-6 w-auto partner-logo-img" />
           </div>
-          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[130px]">
-            <svg class="w-5 h-5 text-[#005073]" fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4a2 2 0 00-2 2v12a2 2 0 002 2h4l4 4 4-4h4a2 2 0 002-2V4a2 2 0 00-2-2z"/></svg>
-            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Cisco</span>
+          <div class="flex-shrink-0 px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center justify-center min-w-[100px]">
+            <img src="https://cdn.simpleicons.org/cisco" alt="Cisco" class="h-6 w-auto partner-logo-img" />
           </div>
-          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[130px]">
-            <svg class="w-5 h-5 text-[#0096D6]" fill="currentColor" viewBox="0 0 24 24"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg>
-            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">HP</span>
+          <div class="flex-shrink-0 px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center justify-center min-w-[100px]">
+            <img src="https://cdn.simpleicons.org/hp" alt="HP" class="h-6 w-auto partner-logo-img" />
           </div>
-          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[140px]">
-            <svg class="w-5 h-5 text-[#1d8348]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
-            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Ubiquiti</span>
+          <div class="flex-shrink-0 px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center justify-center min-w-[100px]">
+            <img src="https://cdn.simpleicons.org/ubiquiti" alt="Ubiquiti" class="h-6 w-auto partner-logo-img" />
           </div>
-          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[130px]">
-            <svg class="w-5 h-5 text-[#2D8CFF]" fill="currentColor" viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
-            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Zoom</span>
+          <div class="flex-shrink-0 px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center justify-center min-w-[100px]">
+            <img src="https://cdn.simpleicons.org/zoom" alt="Zoom" class="h-6 w-auto partner-logo-img" />
           </div>
-          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[140px]">
-            <svg class="w-5 h-5 text-[#B01C2E]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
-            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Sophos</span>
+          <div class="flex-shrink-0 px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center justify-center min-w-[100px]">
+            <img src="https://cdn.simpleicons.org/sophos" alt="Sophos" class="h-6 w-auto partner-logo-img" />
           </div>
           <div class="w-6 flex-shrink-0"></div>
         </div>

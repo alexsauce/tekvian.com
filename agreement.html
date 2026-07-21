@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -269,8 +269,7 @@
 
   (function () {
     const stored = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    applyTheme(stored ? stored === 'dark' : prefersDark);
+    applyTheme(stored ? stored === 'dark' : true);
   })();
 
   document.getElementById('year').textContent = new Date().getFullYear();

@@ -19,11 +19,10 @@ function toggleTheme() {
   applyTheme(dark);
 }
 
-// Init theme from storage or system preference
+// Init theme — default dark unless user has explicitly chosen light
 (function initTheme() {
   const stored = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  applyTheme(stored ? stored === 'dark' : prefersDark);
+  applyTheme(stored ? stored === 'dark' : true);
 })();
 
 // ------------------------------------
