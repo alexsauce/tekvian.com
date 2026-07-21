@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /agreement
+Disallow: /privacy
+
+Sitemap: https://tekvian.com/sitemap.xml
