@@ -110,6 +110,10 @@
     .nav-link:hover::after { width: 100%; }
     .logo-wordmark { filter: brightness(0) invert(1); }
     .dark .logo-wordmark-auto { filter: brightness(0) invert(1); }
+    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .marquee-track { display: flex; animation: marquee 28s linear infinite; width: max-content; }
+    .marquee-track:hover { animation-play-state: paused; }
+    .marquee-wrapper { overflow: hidden; mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
   </style>
 </head>
 
@@ -201,13 +205,13 @@
 
       <!-- Headline -->
       <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
-        <span data-en="Reliable IT Solutions &" data-es="Soluciones de TI Confiables &">Reliable IT Solutions &amp;</span>
+        <span data-en="Enterprise-Grade IT &amp;" data-es="TI de Nivel Empresarial &amp;">Enterprise-Grade IT &amp;</span>
         <br />
         <span class="text-transparent bg-clip-text" style="background-image: linear-gradient(90deg, #7694F4, #4168EE);"
           data-en="Custom App Development" data-es="Desarrollo de Aplicaciones">Custom App Development</span>
         <br />
         <span class="text-slate-200 text-3xl sm:text-4xl lg:text-5xl font-bold"
-          data-en="for Your Business" data-es="para su Negocio">for Your Business</span>
+          data-en="for Growing Businesses" data-es="para Negocios en Crecimiento">for Growing Businesses</span>
       </h1>
 
       <!-- Tagline -->
@@ -284,8 +288,102 @@
         <div class="text-sm text-slate-400" data-en="Remote Support" data-es="Soporte Remoto">Remote Support</div>
       </div>
       <div class="animate-on-scroll">
-        <div class="text-4xl font-extrabold text-brand-400 mb-1">2</div>
-        <div class="text-sm text-slate-400" data-en="Languages (EN/ES)" data-es="Idiomas (EN/ES)">Languages (EN/ES)</div>
+        <div class="text-4xl font-extrabold text-brand-400 mb-1">99.9%</div>
+        <div class="text-sm text-slate-400" data-en="Uptime Guaranteed" data-es="Disponibilidad Garantizada">Uptime Guaranteed</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TRUSTED TECHNOLOGY PARTNERS
+     ============================================================ -->
+<section class="py-14 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <p class="text-center text-xs font-semibold text-slate-400 uppercase tracking-widest mb-8"
+       data-en="Trusted Technology Partners" data-es="Socios Tecnológicos de Confianza">Trusted Technology Partners</p>
+    <div class="marquee-wrapper">
+      <div class="marquee-track gap-6">
+        <!-- First set -->
+        <div class="flex gap-6 items-center">
+          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[140px]">
+            <svg class="w-5 h-5 text-[#00a4ef]" fill="currentColor" viewBox="0 0 24 24"><path d="M11.4 0H0v11.4h11.4V0zM24 0H12.6v11.4H24V0zM11.4 12.6H0V24h11.4V12.6zM24 12.6H12.6V24H24V12.6z"/></svg>
+            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Microsoft</span>
+          </div>
+          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[140px]">
+            <svg class="w-5 h-5 text-[#00bcf2]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Azure</span>
+          </div>
+          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[150px]">
+            <svg class="w-5 h-5 text-[#FF6B35]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm3 10.5H9v-1.5h2.25V10.5H9V9h4.5v5.5H15v1z"/></svg>
+            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Proofpoint</span>
+          </div>
+          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[140px]">
+            <svg class="w-5 h-5 text-[#1D6F42]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">NinjaOne</span>
+          </div>
+          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[130px]">
+            <svg class="w-5 h-5 text-[#005073]" fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4a2 2 0 00-2 2v12a2 2 0 002 2h4l4 4 4-4h4a2 2 0 002-2V4a2 2 0 00-2-2z"/></svg>
+            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Cisco</span>
+          </div>
+          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[130px]">
+            <svg class="w-5 h-5 text-[#0096D6]" fill="currentColor" viewBox="0 0 24 24"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg>
+            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">HP</span>
+          </div>
+          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[140px]">
+            <svg class="w-5 h-5 text-[#1d8348]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Ubiquiti</span>
+          </div>
+          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[130px]">
+            <svg class="w-5 h-5 text-[#2D8CFF]" fill="currentColor" viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Zoom</span>
+          </div>
+          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[140px]">
+            <svg class="w-5 h-5 text-[#B01C2E]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Sophos</span>
+          </div>
+          <div class="w-6 flex-shrink-0"></div>
+        </div>
+        <!-- Duplicate for seamless loop -->
+        <div class="flex gap-6 items-center">
+          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[140px]">
+            <svg class="w-5 h-5 text-[#00a4ef]" fill="currentColor" viewBox="0 0 24 24"><path d="M11.4 0H0v11.4h11.4V0zM24 0H12.6v11.4H24V0zM11.4 12.6H0V24h11.4V12.6zM24 12.6H12.6V24H24V12.6z"/></svg>
+            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Microsoft</span>
+          </div>
+          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[140px]">
+            <svg class="w-5 h-5 text-[#00bcf2]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Azure</span>
+          </div>
+          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[150px]">
+            <svg class="w-5 h-5 text-[#FF6B35]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm3 10.5H9v-1.5h2.25V10.5H9V9h4.5v5.5H15v1z"/></svg>
+            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Proofpoint</span>
+          </div>
+          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[140px]">
+            <svg class="w-5 h-5 text-[#1D6F42]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">NinjaOne</span>
+          </div>
+          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[130px]">
+            <svg class="w-5 h-5 text-[#005073]" fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4a2 2 0 00-2 2v12a2 2 0 002 2h4l4 4 4-4h4a2 2 0 002-2V4a2 2 0 00-2-2z"/></svg>
+            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Cisco</span>
+          </div>
+          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[130px]">
+            <svg class="w-5 h-5 text-[#0096D6]" fill="currentColor" viewBox="0 0 24 24"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg>
+            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">HP</span>
+          </div>
+          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[140px]">
+            <svg class="w-5 h-5 text-[#1d8348]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Ubiquiti</span>
+          </div>
+          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[130px]">
+            <svg class="w-5 h-5 text-[#2D8CFF]" fill="currentColor" viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Zoom</span>
+          </div>
+          <div class="flex-shrink-0 px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center gap-2.5 min-w-[140px]">
+            <svg class="w-5 h-5 text-[#B01C2E]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Sophos</span>
+          </div>
+          <div class="w-6 flex-shrink-0"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -432,35 +530,34 @@
            data-en="Let's talk about your needs →" data-es="Hablemos de sus necesidades →">Let's talk about your needs →</a>
       </div>
 
-      <!-- Right: Feature list -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 animate-on-scroll">
-        <div class="bg-white dark:bg-slate-900 rounded-xl p-6 border border-slate-100 dark:border-slate-700">
-          <div class="w-10 h-10 rounded-lg bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center mb-4">
+      <!-- Right: 3-point value proposition -->
+      <div class="flex flex-col gap-6 animate-on-scroll">
+        <div class="bg-white dark:bg-slate-900 rounded-xl p-6 border border-slate-100 dark:border-slate-700 flex gap-5 items-start">
+          <div class="w-11 h-11 rounded-lg bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center flex-shrink-0">
             <svg class="w-5 h-5 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
           </div>
-          <h4 class="font-bold text-slate-900 dark:text-white mb-1" data-en="Bilingual Team" data-es="Equipo Bilingüe">Bilingual Team</h4>
-          <p class="text-sm text-slate-500 dark:text-slate-400" data-en="English and Spanish support for your whole team, no matter which side of the border you operate on." data-es="Soporte en inglés y español para todo su equipo, sin importar de qué lado de la frontera opera.">English and Spanish support for your whole team, no matter which side of the border you operate on.</p>
-        </div>
-        <div class="bg-white dark:bg-slate-900 rounded-xl p-6 border border-slate-100 dark:border-slate-700">
-          <div class="w-10 h-10 rounded-lg bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <div>
+            <h4 class="font-bold text-slate-900 dark:text-white mb-1" data-en="Bilingual Team" data-es="Equipo Bilingüe">Bilingual Team</h4>
+            <p class="text-sm text-slate-500 dark:text-slate-400" data-en="English and Spanish support for your whole team — no matter which side of the border you operate on." data-es="Soporte en inglés y español para todo su equipo, sin importar de qué lado de la frontera opera.">English and Spanish support for your whole team — no matter which side of the border you operate on.</p>
           </div>
-          <h4 class="font-bold text-slate-900 dark:text-white mb-1" data-en="Cost Savings" data-es="Ahorro de Costos">Cost Savings</h4>
-          <p class="text-sm text-slate-500 dark:text-slate-400" data-en="Predictable monthly pricing eliminates surprise IT costs and reduces downtime that hurts your bottom line." data-es="Precios mensuales predecibles que eliminan costos de TI inesperados y reducen el tiempo de inactividad.">Predictable monthly pricing eliminates surprise IT costs and reduces downtime that hurts your bottom line.</p>
         </div>
-        <div class="bg-white dark:bg-slate-900 rounded-xl p-6 border border-slate-100 dark:border-slate-700">
-          <div class="w-10 h-10 rounded-lg bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center mb-4">
+        <div class="bg-white dark:bg-slate-900 rounded-xl p-6 border border-slate-100 dark:border-slate-700 flex gap-5 items-start">
+          <div class="w-11 h-11 rounded-lg bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center flex-shrink-0">
             <svg class="w-5 h-5 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
           </div>
-          <h4 class="font-bold text-slate-900 dark:text-white mb-1" data-en="Reliability First" data-es="Confiabilidad Primero">Reliability First</h4>
-          <p class="text-sm text-slate-500 dark:text-slate-400" data-en="We build systems and processes that minimize failures and maximize uptime, backed by years of hands-on experience." data-es="Construimos sistemas y procesos que minimizan fallas y maximizan el tiempo de actividad, respaldados por años de experiencia.">We build systems and processes that minimize failures and maximize uptime, backed by years of hands-on experience.</p>
+          <div>
+            <h4 class="font-bold text-slate-900 dark:text-white mb-1" data-en="99.9% Uptime Reliability" data-es="99.9% de Disponibilidad">99.9% Uptime Reliability</h4>
+            <p class="text-sm text-slate-500 dark:text-slate-400" data-en="Proactive monitoring and rapid response keeps your systems online. Downtime costs money — we prevent it." data-es="El monitoreo proactivo y la respuesta rápida mantienen sus sistemas en línea. El tiempo de inactividad cuesta dinero — nosotros lo prevenimos.">Proactive monitoring and rapid response keeps your systems online. Downtime costs money — we prevent it.</p>
+          </div>
         </div>
-        <div class="bg-white dark:bg-slate-900 rounded-xl p-6 border border-slate-100 dark:border-slate-700">
-          <div class="w-10 h-10 rounded-lg bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center mb-4">
+        <div class="bg-white dark:bg-slate-900 rounded-xl p-6 border border-slate-100 dark:border-slate-700 flex gap-5 items-start">
+          <div class="w-11 h-11 rounded-lg bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center flex-shrink-0">
             <svg class="w-5 h-5 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
           </div>
-          <h4 class="font-bold text-slate-900 dark:text-white mb-1" data-en="Local Presence" data-es="Presencia Local">Local Presence</h4>
-          <p class="text-sm text-slate-500 dark:text-slate-400" data-en="Nogales, AZ based — we understand the unique challenges of businesses operating in the US-Mexico border region." data-es="Con sede en Nogales, AZ — entendemos los desafíos únicos de las empresas en la región fronteriza EE.UU.-México.">Nogales, AZ based — we understand the unique challenges of businesses operating in the US-Mexico border region.</p>
+          <div>
+            <h4 class="font-bold text-slate-900 dark:text-white mb-1" data-en="Local &amp; Border-Region Expertise" data-es="Experiencia Local y Fronteriza">Local &amp; Border-Region Expertise</h4>
+            <p class="text-sm text-slate-500 dark:text-slate-400" data-en="Nogales, AZ based since 2010 — we understand cross-border operations, compliance, and the unique tech challenges of the region." data-es="Con base en Nogales, AZ desde 2010 — entendemos las operaciones transfronterizas, el cumplimiento y los desafíos tecnológicos únicos de la región.">Nogales, AZ based since 2010 — we understand cross-border operations, compliance, and the unique tech challenges of the region.</p>
+          </div>
         </div>
       </div>
     </div>
