@@ -1,0 +1,142 @@
+project:
+  name: Tekvian Solutions Website
+  url: https://tekvian.com
+  repo: https://github.com/alexsauce/tekvian.com
+  hosting: GitHub Pages
+  type: static-site
+  languages: [en, es]
+
+pages:
+  - id: index
+    path: index.html
+    url: /
+    indexed: true
+    js: js/main.js
+    description: Main single-page marketing site
+    sections: [home, services, about, expertise, industries, contact]
+
+  - id: agreement
+    path: agreement/index.html
+    url: /agreement
+    indexed: false
+    js: inline-only
+    description: Service Agreement legal page
+
+  - id: privacy
+    path: privacy/index.html
+    url: /privacy
+    indexed: false
+    js: inline-only
+    description: Privacy Policy legal page
+
+  - id: not-found
+    path: 404.html
+    url: "/*"
+    indexed: false
+    js: inline-only
+    description: Branded 404 error page
+
+assets:
+  scripts:
+    - path: js/main.js
+      role: core-runtime
+      functions:
+        - applyTheme
+        - toggleTheme
+        - setLang
+        - toggleMobileMenu
+        - closeMobileMenu
+        - IntersectionObserver (scroll animations)
+        - form submit handler
+        - smooth scroll polyfill
+  images:
+    - file: TKV_LOGOTIPO-07 - Logo.png
+      role: primary-logo
+      format: PNG
+    - file: TKV_ISOTIPO-03 v1.png
+      role: favicon
+      format: PNG
+    - file: 04.TKV_FONDOP_1.jpg
+      role: hero-background
+      format: JPEG
+      note: Optimized from original PNG (93% size reduction)
+    - file: og-image.png
+      role: social-share
+      dimensions: 1200x630
+      format: PNG
+
+external_services:
+  - name: Formspree
+    purpose: contact-form-email
+    endpoint: https://formspree.io/f/mkodzveg
+    token: mkodzveg
+    fallback: error message shown to user
+
+  - name: Cloudflare Analytics
+    purpose: visitor-tracking
+    token: 3ae66682cd3d4076a9004d1d80651326
+    fallback: silent
+
+  - name: Tailwind Play CDN
+    purpose: css-utilities
+    url: https://cdn.tailwindcss.com
+    note: dev-mode CDN — no purging, ~400KB JS payload
+
+  - name: SimpleIcons CDN
+    purpose: partner-logos
+    url: https://cdn.simpleicons.org/{slug}
+    fallback: onerror shows text span
+
+  - name: Google Fonts
+    purpose: typography
+    family: Inter
+    weights: [300, 400, 500, 600, 700, 800]
+    fallback: system-ui, sans-serif
+
+  - name: Google Maps Embed
+    purpose: contact-section-map
+    note: no API key, embed URL only
+
+invariants:
+  - id: dark-mode-default
+    description: Dark mode is the default. <html> must have class="dark" at parse time to avoid flash.
+    files: [index.html, agreement/index.html, privacy/index.html, 404.html]
+
+  - id: bilingual-completeness
+    description: Every [data-en] element must also have [data-es]. Missing attribute silently empties the element on language switch.
+    files: [index.html]
+
+  - id: relative-image-paths
+    description: Legal pages use ../images/ (relative), not /images/ (absolute), to support file:// local preview.
+    files: [agreement/index.html, privacy/index.html]
+
+  - id: tailwind-config-sync
+    description: The inline tailwind.config block (brand colors, darkMode: 'class') must be identical across all HTML files.
+    files: [index.html, agreement/index.html, privacy/index.html]
+
+  - id: clean-urls
+    description: /agreement and /privacy work via folder/index.html pattern. Do not flatten to .html files.
+    files: [agreement/index.html, privacy/index.html]
+
+  - id: onerror-on-partner-logos
+    description: Every partner logo <img> must have an onerror handler showing a text fallback span.
+    files: [index.html]
+
+seo:
+  sitemap: https://tekvian.com/sitemap.xml
+  indexed_pages: [/]
+  noindex_pages: [/agreement, /privacy, /404]
+  structured_data: LocalBusiness
+  og_image: https://tekvian.com/images/og-image.png
+  canonical: https://tekvian.com/
+
+dns:
+  registrar: Cloudflare
+  mode: DNS-only (grey cloud)
+  a_records:
+    - 185.199.108.153
+    - 185.199.109.153
+    - 185.199.110.153
+    - 185.199.111.153
+  cname: www → alexsauce.github.io
+  note: Proxy must stay OFF — GitHub Pages issues its own SSL cert
